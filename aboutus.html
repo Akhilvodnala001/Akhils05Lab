@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Lab Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <style>
+        body {
+            background-color: hsl(41, 78%, 50%); /* Dark background color */
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .carousel-caption h5, .carousel-caption p {
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        .card-img-top {
+            border-bottom: 1px solid #ddd;
+        }
+        .card-body {
+            background-color: #343a40;
+            color: #fff;
+        }
+        .card-text {
+            font-size: 1.1rem;
+        }
+        .dropdown-menu {
+            background-color: #343a40;
+        }
+        .dropdown-item {
+            color: #fff;
+        }
+        .dropdown-item:hover {
+            background-color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img style="width: 100px;" src="https://content3.jdmagicbox.com/comp/hyderabad/a1/040pxx40.xx40.180216171541.m3a1/catalogue/hyderabad-institute-of-technology-and-management-gv-sagar-reddy-nagar-ramakrishna-puram-hyderabad-colleges-bw11atljag.jpg" alt="Institute Logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="labs.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="airpollution.html">Air Pollution</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="temperature.html">Temperature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Attendance.html">Attendance</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="loads.html">Load Control</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="plugload.html">Plug Load</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="material-icons-sharp">more_vert</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="loginpage.html"><span class="material-icons-sharp">logout</span> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row mx-auto mt-3">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="hitam.jpg" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>HITAM</h5>
+                            <p>Hyderabad Institute Of Technology And Management</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="smart.jpeg" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="group.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#teamMember1Modal">
+                    <img src="logo.jpg" class="card-img-top" alt="Air Pollution Monitoring">
+                    <div class="card-body">
+                        <p class="card-text">Air Pollution Monitoring System</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#teamMember2Modal">
+                    <img src="logo.jpg" class="card-img-top" alt="Temperature Monitoring">
+                    <div class="card-body">
+                        <p class="card-text">Temperature Monitoring System</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#teamMember3Modal">
+                    <img src="logo.jpg" class="card-img-top" alt="Smart Attendance">
+                    <div class="card-body">
+                        <p class="card-text">Smart Attendance System</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-4 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#teamMember4Modal">
+                    <img src="logo.jpg" class="card-img-top" alt="Loads Automation">
+                    <div class="card-body">
+                        <p class="card-text">Loads Automation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#teamMember5Modal">
+                    <img src="logo.jpg" class="card-img-top" alt="Plug Load Monitoring">
+                    <div class="card-body">
+                        <p class="card-text">Plug Load Monitoring System</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#teamMember6Modal">
+                    <img src="logo.jpg" class="card-img-top" alt="S-18 Smart Lab">
+                    <div class="card-body">
+                        <p class="card-text">S-18 Smart Lab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="teamMember1Modal" tabindex="-1" aria-labelledby="teamMember1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teamMember1ModalLabel">Air Pollution Monitoring System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Details about the Air Pollution Monitoring System, including team member information, project specifics, and more.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Repeat for other modals -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
